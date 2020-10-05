@@ -52,7 +52,7 @@ instaOAuth <- function(app_id, app_secret, scope=c("basic", "public_content")){
     full_url <- httr::oauth_callback()
     full_url <- gsub("(.*localhost:[0-9]{1,5}/).*", x=full_url, replacement="\\1")
     ## fixing most common error
-    if (full_url=="http://localhost:1410") full_url <- 'http://localhost:1410/'
+    if (full_url=="https://localhost:1410") full_url <- 'https://localhost:1410/'
 
     message <- paste("Copy and paste into 'OAuth redirect_uri' on Instagram App Settings:", 
         full_url, "\nWhen done, press any key to continue...")
