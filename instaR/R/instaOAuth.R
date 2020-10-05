@@ -60,7 +60,7 @@ instaOAuth <- function(app_id, app_secret, scope=c("basic", "public_content")){
     invisible(readline(message))
     ## using httr package functions
     instagram <- httr::oauth_endpoint(NULL, "authorize", "access_token",
-        base_url = "https://api.instagram.com/oauth")
+        base_url = "https://api.instagram.com/oauth/authorize")
     myapp <- httr::oauth_app("instagram", app_id, app_secret)
 
     ## before httr 0.3
